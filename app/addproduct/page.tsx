@@ -26,7 +26,7 @@ const AddProduct = () => {
 
   const onsubmit = async (products: CreateProductForm) => {
     try {
-      await axios.post('http://localhost:3000/products', products);
+      await axios.post('http://10.10.50.59:3000/products', products);
       reset();
       setResp('პროდუქტი წარმატებით შეიქმნა');
     } catch (err) {

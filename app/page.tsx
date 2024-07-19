@@ -17,7 +17,7 @@ export default function App() {
   const [products,setProduct] = useState([])
 
   useEffect (() => {
-    axios.get(`http://localhost:3000/products${category ? '/category/' + category: []}`)
+    axios.get(`http://10.10.50.59:3000/products${category ? '/category/' + category: []}`)
     .then(result => {
       setProduct(result.data)
     })
