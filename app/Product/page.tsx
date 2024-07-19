@@ -19,7 +19,7 @@ const BuyNow = () => {
 
 
   useEffect(() => {
-    axios.get(`https://fakestoreapi.com/products/${id}`)
+    axios.get(`http://10.10.50.59:3000/products/${id}`)
     .then(result => {
       setProduct(result.data)
       console.log(result.data)
@@ -38,7 +38,7 @@ const BuyNow = () => {
       <div className={styles.fruitImage}>
         <img src={product?.image} alt="xili" />
         <div className={styles.iconsWrapper}>
-          <div className={styles.iconWrapper}>
+          <div className={styles.iconWrapper} >
             <img src={"/images/pen.svg"} />
           </div>
           <div className={styles.iconWrapper}>
@@ -49,7 +49,7 @@ const BuyNow = () => {
       <div className={styles.description}>
         <div className={styles.descriptionWrapper}>
           <div className={styles.nameAndDescription}>
-            <div className={styles.name}>{product?.id}</div>
+            <div className={styles.name}>{product?.name}</div>
             <div className={styles.descriptionText}>
               {product?.description}
             </div>

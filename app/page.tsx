@@ -10,11 +10,11 @@ import Filters from "./components/Filters/Filters";
 import { Value } from "sass";
 import axios from "axios";
 import { useRecoilState } from "recoil";
-import { categoryState } from "./states";
+import { categoryState, productState } from "./states";
 
 export default function App() {
   const [category, setCategory] = useRecoilState(categoryState)
-  const [products,setProduct] = useState([])
+  const [products,setProduct] = useRecoilState(productState)
 
   useEffect (() => {
     axios.get(`http://10.10.50.59:3000/products${category ? '/category/' + category: []}`)
