@@ -16,6 +16,7 @@ export interface Fruit {
 type Props = {
   fruit: Fruit;
 };
+
 const FruitCard = (props: Props) => {
   const [products,setProducts] = useRecoilState(productState)
   const router = useRouter

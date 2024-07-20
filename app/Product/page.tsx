@@ -31,7 +31,7 @@ const BuyNow = () => {
       <div className={styles.fruitImage}>
         <img src={product?.image} alt="xili" />
         <div className={styles.iconsWrapper}>
-          <div className={styles.iconWrapper}>
+          <div className={styles.iconWrapper} >
             <img src={"/images/pen.svg"} />
           </div>
           <div className={styles.iconWrapper}>

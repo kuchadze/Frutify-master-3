@@ -27,6 +27,7 @@ const AddProduct = () => {
   useEffect(() => {
     if (id) {
       axios.get(`http://10.10.50.59:3000/products/${id}`)
+
         .then(result => {
           reset(result.data)
         })
